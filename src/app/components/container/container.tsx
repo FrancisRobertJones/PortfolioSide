@@ -1,9 +1,9 @@
 import React from 'react'
-import classNames from 'classnames'
 
-const Container = ( {children, className}: {children:React.ReactNode, className?: string }) => {
+
+const Container = ( {children}: {children:React.ReactNode}) => {
   return (
-        <div className={classNames("max-w-[160rem] mx-auto pt-[1rem] min-h-screen font-trap tracking-wide text-white bg-custom px-6", className)}>{children}</div>
+        <div className="max-w-[160rem] mx-auto pt-[1rem] min-h-screen font-trap tracking-wide text-white bg-custom px-6">{children}</div>
   ) 
 }
 
