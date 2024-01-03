@@ -1,0 +1,9 @@
+.portfolio-item {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .portfolio-item:hover {
+    filter: grayscale(0%);
+  }
+  
