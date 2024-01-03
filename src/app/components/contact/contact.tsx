@@ -19,12 +19,11 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
               Contact me
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-white font-medium">
-              I&aposm eager to learn more about internships autumn 2024, alternatively employment possibilites.
+              I am eager to learn more about internships autumn 2024, alternatively employment possibilites.
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <form className="flex flex-wrap -m-2" onSubmit={handleSubmit}>
-              {/* Name Input */}
               <div className="p-2 w-full">
                 <div className="relative">
                   <label
@@ -41,7 +40,6 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
                   />
                 </div>
               </div>
-              {/* Email Input */}
               <div className="p-2 w-full">
                 <div className="relative">
                   <label
@@ -58,7 +56,6 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
                   />
                 </div>
               </div>
-              {/* Message Textarea */}
               <div className="p-2 w-full">
                 <div className="relative">
                   <label
@@ -74,7 +71,6 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
                   ></textarea>
                 </div>
               </div>
-              {/* Submit Button */}
               <div className="p-2 w-full">
                 <button
                   type="submit"
