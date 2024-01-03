@@ -19,7 +19,7 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
               Contact me
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-white font-medium">
-              I'm eager to learn more about internships autumn 2024, alternatively employment possibilites.
+              I&aposm eager to learn more about internships autumn 2024, alternatively employment possibilites.
             </p>
           </div>
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
