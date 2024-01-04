@@ -95,9 +95,8 @@ export const Skill_data = [
     },
   ];
   
-  
-  
-  export const Frontend_skill = [
+
+  export const HTMLCSSJS = [
     {
       skill_name: "Html 5",
       Image: "/html.png",
@@ -105,17 +104,22 @@ export const Skill_data = [
       height: 80,
     },
     {
+    skill_name: "Java Script",
+    Image: "/js.png",
+    width: 65,
+    height: 65,
+  },
+    {
       skill_name: "Css",
       Image: "/css.png",
       width: 80,
       height: 80,
     },
-    {
-      skill_name: "Java Script",
-      Image: "/js.png",
-      width: 65,
-      height: 65,
-    },
+
+  ]
+  
+  export const Frontend_skill = [
+
     {
       skill_name: "Tailwind Css",
       Image: "/tailwind.png",
