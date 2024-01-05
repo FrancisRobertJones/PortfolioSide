@@ -116,8 +116,7 @@ const Hero: React.FC<HeroProps> = ({
 
         {showSkills &&
         <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto font-mono md:flex-col md:text-left">
-                    Constantly looking to learn new technologies and frameworks to broaden my skillset, with focus currently on backend and serverside development in Node and PHP. <br/> 
-                    Something which I am particularly interested in diving into more is the implementation of LLMs within web apps for improving UX and the exciting possibilities they will bring. 
+                    Constantly looking to learn new technologies and frameworks to broaden my skillset, with focus currently on backend and serverside development in Node and PHP. 
         </div>
         }
       </div>
