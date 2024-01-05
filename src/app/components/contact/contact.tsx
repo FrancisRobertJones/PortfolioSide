@@ -1,10 +1,8 @@
 import React from 'react';
 
-interface ContactProps {
-  onCloseContactForm: () => void;
-}
 
-const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
+
+const Contact = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Your logic for handling form submission
@@ -14,14 +12,7 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
     <div>
       <section className="text-white relative font-mono">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
-              Contact me
-            </h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-white font-medium">
-              I am eager to learn more about internships autumn 2024, alternatively employment possibilites.
-            </p>
-          </div>
+ 
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
             <form className="flex flex-wrap -m-2" onSubmit={handleSubmit}>
               <div className="p-2 w-full">
@@ -80,12 +71,7 @@ const Contact: React.FC<ContactProps> = ({ onCloseContactForm }) => {
                 </button>
               </div>
             </form>
-       
-            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <button className="text-gray-500" onClick={onCloseContactForm}>
-                Close Contact Form
-              </button>
-            </div>
+    
           </div>
         </div>
       </section>

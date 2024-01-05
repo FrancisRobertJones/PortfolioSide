@@ -67,10 +67,7 @@ const skills = ({className}: {className?: string }) => {
             
 
             </div>
-            <div className='max-w-xl leading-8 space-y-2 tracking-wider font-mono md:flex-col md:text-left mt-12'>
-                    I am constantly looking to learn new technologies and frameworks, with focus currently on backend and serverside development in Node and PHP. <br/> 
-                    Something which I am particularly interested in diving into more is the implementation of LLMs within web apps for improving UX and the exciting possibilities they will bring. 
-            </div>
+
 
 
     </section>

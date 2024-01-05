@@ -43,7 +43,7 @@ export default function Home() {
           showSkills={showSkills}
         />
         {showContactForm ? (
-          <Contact onCloseContactForm={() => setShowContactForm(false)} />
+          <Contact />
         ) : showPortfolio ? (
           <Portfolio />
         ) : (

@@ -1,5 +1,8 @@
 import styles from './hero.module.css';
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
 
 interface HeroProps {
   onContactClick: () => void;
@@ -36,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <header className={`z-0 sticky top-0`} style={{ opacity: scrollOpacity }}>
               <h1 className="mb-1 w-full text-left font-mono text-white/30 lg:text-right 2xl:text-lg pt-6 z-0">
-            PRESENTED BY <span className="text-white underline">FRANCIS JONES</span>
+            PRESENTED BY <Link href="https://www.linkedin.com/in/francis-jones-498423297/" className="text-white underline">FRANCIS JONES</Link> <FontAwesomeIcon className='text-white' icon={faLinkedin} />
           </h1>
 
         <div className='w-full mt-10'>
@@ -99,11 +102,24 @@ const Hero: React.FC<HeroProps> = ({
             </a>
           </div>
         </div>
-        <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto font-mono md:flex-col md:text-left">
+        {showPortfolio && <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto font-mono md:flex-col md:text-left">
           Stockholm based. Pivoting from a career in healthcare and entrepreneurship
           to pursue a career in tech and problem-solving. Humble, curious and quick to
           learn. <br /> Looking for opportunities for an internship autumn 2024.
+        </div> }
+        
+        {showContactForm && <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto font-mono md:flex-col md:text-left">
+            {`I'm eager to learn more about internships for autumn 2024. 
+        Open to working on-site in Stockholm, or remote. Don't hesitate to contact me with any questions. 
+        Also open to collaborations and freelance work.`}
+        </div> }
+
+        {showSkills &&
+        <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto font-mono md:flex-col md:text-left">
+                    Constantly looking to learn new technologies and frameworks to broaden my skillset, with focus currently on backend and serverside development in Node and PHP. <br/> 
+                    Something which I am particularly interested in diving into more is the implementation of LLMs within web apps for improving UX and the exciting possibilities they will bring. 
         </div>
+        }
       </div>
     </header>
   );
