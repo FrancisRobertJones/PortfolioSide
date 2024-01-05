@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({
             } cursor-pointer transition duration-300 ease-in-out`}
             onClick={onSkillsClick}
           >
-              SKILLS {showSkills && <span className="ml-1">▼</span>}
+              SKILLS & GITHUB {showSkills && <span className="ml-1">▼</span>}
           </div>
 
           {/* DOWNLOAD CV USIG GOOGLE DRIVE FOR NOW */}

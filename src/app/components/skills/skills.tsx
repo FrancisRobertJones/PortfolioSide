@@ -1,7 +1,9 @@
 import React from 'react'
 import { Backend_skill, Frontend_skill, Full_stack, HTMLCSSJS } from '@/data/data'
 import SkillDataProvider from '../skilldataprovider/skilldataprovider'
-
+import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 
 const skills = ({className}: {className?: string }) => {
@@ -64,12 +66,13 @@ const skills = ({className}: {className?: string }) => {
                         
                         )) }
 
-            
 
             </div>
-
-
-
+            <div>
+                <h1 className=" w-full font-mono text-white/30 text-2xl  lg:text-3xl pt-6 z-0">
+                <Link href="https://github.com/frankosgit" className="text-white underline">GITHUB</Link> <FontAwesomeIcon icon={faGithub} />
+            </h1>
+          </div>
     </section>
   )
 }
