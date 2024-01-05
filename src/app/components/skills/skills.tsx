@@ -70,7 +70,7 @@ const skills = ({className}: {className?: string }) => {
             </div>
             <div>
                 <h1 className=" w-full font-mono text-white/30 text-2xl  lg:text-3xl pt-6 z-0">
-                <Link href="https://github.com/frankosgit" className="text-white underline">GITHUB</Link> <FontAwesomeIcon icon={faGithub} />
+                <Link href="https://github.com/frankosgit" className="text-white underline cursor-pointer">GITHUB</Link> <FontAwesomeIcon icon={faGithub} />
             </h1>
           </div>
     </section>
