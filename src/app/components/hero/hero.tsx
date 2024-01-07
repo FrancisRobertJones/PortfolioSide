@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({
           {/* DOWNLOAD CV USIG GOOGLE DRIVE FOR NOW */}
           <div className="font-mono text-white/30 cursor-pointer transition duration-300 ease-in-out">
             <a
-              href="https://drive.google.com/drive/folders/1pFhS2y59YHkBtUkeUvBTtNZfbewKzcao?usp=sharing" 
+              href="https://drive.google.com/drive/u/0/folders/1pFhS2y59YHkBtUkeUvBTtNZfbewKzcao" 
               download="FrancisJonesCV.pdf" 
               className="font-mono text-white/30 cursor-pointer transition duration-300 ease-in-out"
             >

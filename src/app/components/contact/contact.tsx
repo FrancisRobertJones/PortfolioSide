@@ -1,12 +1,43 @@
-import React from 'react';
-
-
+import React, { useEffect, useState } from 'react';
 
 const Contact = () => {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Your logic for handling form submission
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch('/app/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(response);
+      if (response.ok) {
+        console.log('Email sent successfully!');
+      } else {
+        const responseBody = await response.text();
+        console.error('Error sending email:', responseBody);
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  };
+
+  useEffect(() => {
+    console.log(formData);
+  },[formData]);
+
 
   return (
     <div>
@@ -27,6 +58,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
+                    onChange={handleChange}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -43,6 +75,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
+                    onChange={handleChange}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
@@ -58,6 +91,7 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
+                    onChange={handleChange}
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
                 </div>
