@@ -29,7 +29,7 @@ const ContactFormEmail = ({message, senderEmail}: ContactFormEmailProps) => {
                         <Heading className='leading-tight'>You recieved the following message from the contact form</Heading>
                         <Text>{message}</Text>
                         <Hr/>
-                        <Text>The sender's email is: {senderEmail}</Text>
+                        <Text>The sender&#39s email is: {senderEmail}</Text>
                     </Section>
                 </Container>
             </Body>
