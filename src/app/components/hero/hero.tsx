@@ -1,4 +1,3 @@
-import styles from './hero.module.css';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -54,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({
       </style>
       <svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
         <rect width="100%" height="100%" fill="#121417" />
-        <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" fill="white"  font-size="85">
+        <text x="50%" y="50%" alignmentBaseline="middle" textAnchor="middle" fill="white"  fontSize="85">
           FULLSTACK
         </text>
       </svg>

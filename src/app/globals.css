@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Trap';
-  src: url('../app/assets/fonts/Trap_V1.1/Trap-Black.otf') format('opentype');
+  src: url('./assets/fonts/Trap_V1.1/Trap-Black.otf') format('opentype');
   font-weight: normal;
 }
 

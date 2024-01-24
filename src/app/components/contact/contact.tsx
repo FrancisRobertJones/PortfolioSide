@@ -1,116 +1,80 @@
-import React, { useEffect, useState } from 'react';
+"use client"
+import React from 'react';
+import { sendEmail } from '../../../../actions/sendEmail';
+import SubmitButton from '../submit-btn';
+import { toast } from 'react-hot-toast';
+
+
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch('/app/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      console.log(response);
-      if (response.ok) {
-        console.log('Email sent successfully!');
-      } else {
-        const responseBody = await response.text();
-        console.error('Error sending email:', responseBody);
-      }
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
-  };
-
-  useEffect(() => {
-    console.log(formData);
-  },[formData]);
-
 
   return (
+
     <div>
-      <section className="text-white relative font-mono">
-        <div className="container px-5 py-24 mx-auto">
- 
+      <section
+        id="contact"
+        className="mb-20 sm:mb-28, w-[min(100%, 38rem)] text-center font-mono text-white"
+      >
+        <div className='mt-48 text-center'>
+          <h1 className='text-2xl mb-4'>Contact me</h1>
+          <h2 className='text-m'>Contact me directly on <a className='underline' href="mailto:devfrancisjones@gmaill.com">devfrancisjones@gmail.com</a> or <br /> through this form</h2>
+        </div>
+        <div className="container px-5 py-12 mx-auto">
+
           <div className="lg:w-1/2 md:w-2/3 mx-auto">
-            <form className="flex flex-wrap -m-2" onSubmit={handleSubmit}>
+            <form className="flex flex-wrap -m-2" 
+            action={async (formData) => {
+              const {data, error} = await sendEmail(formData)
+              if(error) {
+                toast.error(error)
+                return;
+              }
+              toast.success('Message sent successfully!')
+            }
+            }>
+
               <div className="p-2 w-full">
                 <div className="relative">
-                  <label
-                    htmlFor="name"
-                    className="leading-7 text-sm text-gray-400"
-                  >
-                    Name
-                  </label>
+
                   <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    onChange={handleChange}
+                    id="senderEmail"
+                    name="senderEmail"
+                    type="senderEmail"
+                    required
+                    maxLength= {500}
+                     placeholder="Your email"
                     className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
+
               </div>
               <div className="p-2 w-full">
+
+
                 <div className="relative">
-                  <label
-                    htmlFor="email"
-                    className="leading-7 text-sm text-gray-400"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    onChange={handleChange}
-                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div className="p-2 w-full">
-                <div className="relative">
-                  <label
-                    htmlFor="message"
-                    className="leading-7 text-sm text-gray-400"
-                  >
-                    Message
-                  </label>
                   <textarea
+                    placeholder='Leave me a message'
                     id="message"
                     name="message"
-                    onChange={handleChange}
-                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                    required
+                    maxLength={5000}
+                    className="w-full pt-2 bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-52 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   ></textarea>
+
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button
-                  type="submit"
-                  className="flex mx-auto text-black bg-white border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                >
-                  Submit
-                </button>
+                <SubmitButton />
               </div>
             </form>
-    
+
           </div>
         </div>
       </section>
+
     </div>
   );
 };
+
 
 export default Contact;
