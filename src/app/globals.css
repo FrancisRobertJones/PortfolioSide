@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Trap';
-  src: url('./assets/fonts/Trap_V1.1/Trap-Black.otf') format('opentype');
+  font-family: 'Trap', sans-serif;
+  src: url('./assets/fonts/Trap_V1.1/Trap-Black.otf') format('otf');
   font-weight: normal;
 }
 
