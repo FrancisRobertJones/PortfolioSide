@@ -13,7 +13,7 @@ const Portfolio = () => {
                      E-CV and Skills
                     </h1>
                     <div className="uppercase 2xl:text-lg">Tech stack: Next JS, TS, TW, CSS animations & Framer motion</div>
-                    <span className="underline">coming soon</span>
+                    <span className="underline font-bold text-white">coming soon</span>
                 </a>
             </li>
             <li className='mb-16'>
@@ -22,7 +22,7 @@ const Portfolio = () => {
                     Fullstack e-commerce store
                     </h1>
                     <div className="mt-3 uppercase 2xl:text-lg">Tech stack: Next JS, TS, DaisyUI, SQL & Auth with supabase </div>
-                    <span className="underline">coming soon</span>
+                    <span className="underline text-white">coming soon</span>
                 </a>
             </li>
             <li className='mb-16'>
@@ -31,7 +31,7 @@ const Portfolio = () => {
                         Contributions to fullstack parking application
                     </h1>
                     <div className="mt-3 uppercase 2xl:text-lg">Tech stack: Next JS, TS, MongoDB</div>
-                    <span className="underline">coming soon</span>
+                    <span className="underline text-white">coming soon</span>
                 </a>
             </li>
 

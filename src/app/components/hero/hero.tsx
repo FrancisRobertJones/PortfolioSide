@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({
 
 
       <div className="mt-14 flex flex-col lg:flex-row pr-6">
-        <div className="flex flex-col lg:justify-between mb-6">
+        <div className="flex flex-col lg:justify-between mb-10">
 
           <div
             className={` ${
@@ -83,31 +83,31 @@ const Hero: React.FC<HeroProps> = ({
           </div>
 
           {/* DOWNLOAD CV USIG GOOGLE DRIVE FOR NOW */}
-          <div className=" text-white/30 cursor-pointer transition duration-300 ease-in-out">
+      {/*     <div className=" text-white/30 cursor-pointer transition duration-300 ease-in-out">
             <a
-              href="https://drive.google.com/drive/u/0/folders/1pFhS2y59YHkBtUkeUvBTtNZfbewKzcao" 
-              download="FrancisJonesCV.pdf" 
+              href="./" 
+              download="/public/FrancisJonesCV.pdf" 
               className=" text-white/30 cursor-pointer transition duration-300 ease-in-out"
             >
               DOWNLOAD CV
             </a>
-          </div>
+          </div> */}
         </div>
         {showPortfolio && <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto md:flex-col md:text-left">
           Stockholm based. Pivoting from a career in healthcare and entrepreneurship
           to pursue a career in tech and problem-solving. Humble, curious and quick to
-          learn. <br /> Looking for opportunities for an internship autumn 2024.
+          learn. <br /> Looking for internship opportunties September 2024.
         </div> }
         
         {showContactForm && <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto md:flex-col md:text-left">
             {`I'm eager to learn more about internships for autumn 2024. 
-        Open to working on-site in Stockholm, or remote. Don't hesitate to contact me with any questions. 
+        I'm open to working on-site in Stockholm, or remote. Don't hesitate to contact me with any questions. 
         Also open to collaborations and freelance work.`}
         </div> }
 
         {showSkills &&
         <div className="max-w-xl leading-8 space-y-2 tracking-wider ml-auto md:flex-col md:text-left">
-                    Constantly looking to learn new technologies and frameworks to broaden my skillset, with focus currently on backend and serverside development in Node and PHP. 
+                   {`I'm constantly looking to learn new technologies and frameworks to broaden my skillset, with focus currently on backend and serverside development in Node and PHP.`}
         </div>
         }
       </div>
