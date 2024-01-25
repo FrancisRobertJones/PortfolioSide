@@ -5,7 +5,7 @@ import styles from './portfolio.module.css'
 const Portfolio = () => {
   return (
     <div>
-    <main className='z-50 relative mt-16 bg-background-black'>
+    <main className='z-50 relative mt-16 bg-background-black font-TrapMedium'>
         <ul className='w-full'>
             <li className='mb-16 z-10'>
             <a href="" className={`block w-full border-t border-t-neutral-700 pt-4 ${styles['portfolio-item']}`} style={{ filter: 'grayscale(100%)', transition: 'filter 0.3s ease-in-out' }}>

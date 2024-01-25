@@ -42,16 +42,8 @@ const Hero: React.FC<HeroProps> = ({
           </h1>
 
         <div className='w-full mt-10'>
-        <style jsx global>
-        {`
-          @font-face {
-            font-family: 'Trap';
-            src: url('../app/assets/fonts/Trap_V1.1/Trap-Black.otf') format('opentype');
-            font-weight: normal;
-          }
-        `}
-      </style>
-      <svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" className="w-full h-auto">
+
+      <svg viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" className="w-full h-auto font-TrapMedium">
         <rect width="100%" height="100%" fill="#121417" />
         <text x="50%" y="50%" alignmentBaseline="middle" textAnchor="middle" fill="white"  fontSize="85">
           FULLSTACK

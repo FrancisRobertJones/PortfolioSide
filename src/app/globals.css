@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Trap', sans-serif;
-  src: url('https://fullstackfrancis.com/assets/fonts/Trap_V1.1/Trap-Black.otf') format('opentype'),
-       url('https://fullstackfrancis.com/assets/fonts/Trap_V1.1/Trap-Black.otf') format('otf');
-  font-weight: normal;
-}
 
 :root {
   --foreground-rgb: 0, 0, 0;

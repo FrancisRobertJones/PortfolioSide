@@ -34,7 +34,9 @@ const config: Config = {
 
             },
     extend: {
-      
+      fontFamily: {
+        TrapMedium: ["var(--Trap-Medium)"],
+      }
     },
   },
   plugins: [],
