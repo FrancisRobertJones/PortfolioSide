@@ -63,7 +63,7 @@ const Contact = () => {
 
                 </div>
               </div>
-              <div className="p-2 w-full">
+              <div className="p-2 w-full z-10">
                 <SubmitButton />
               </div>
             </form>
