@@ -38,7 +38,7 @@ const Hero: React.FC<HeroProps> = ({
   return (
     <header className={`z-0 sticky top-0`} style={{ opacity: scrollOpacity }}>
               <h1 className="mb-1 w-full text-left font-mono text-white/30 lg:text-right 2xl:text-lg pt-6 z-0">
-            PRESENTED BY <Link href="https://www.linkedin.com/in/francis-jones-498423297/" className="text-white underline">FRANCIS JONES</Link> <FontAwesomeIcon className='text-white' icon={faLinkedin} />
+            PRESENTED BY <Link rel="preload" href="https://www.linkedin.com/in/francis-jones-498423297/" className="text-white underline">FRANCIS JONES</Link> <FontAwesomeIcon className='text-white' icon={faLinkedin} />
           </h1>
 
         <div className='w-full mt-10'>
