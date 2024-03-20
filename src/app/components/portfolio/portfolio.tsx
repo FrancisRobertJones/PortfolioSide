@@ -124,7 +124,7 @@ const Portfolio = () => {
                                         <li className='uppercase'>Reflections</li>
                                         <li>A rewarding project tying together back and frontend technologies and expertise.</li>
                                         <li className='uppercase mt-12'>Challenges & Learning</li>
-                                        <li>Implementing efficient image search and 'like' feature.</li>
+                                        <li>Implementing efficient image search and the like/unlike features.</li>
                                         <li>Ensuring secure user authentication with Auth0.</li>
                                         <li>Developing a user-friendly mobile responsive layout.</li>
                                     </ul>
