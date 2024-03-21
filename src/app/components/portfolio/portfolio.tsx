@@ -154,7 +154,7 @@ const Portfolio = () => {
                                             <p>LIVE SITE COMING SOON</p>
                                         </li>
                                         <li>
-                                            <a href='https://github.com/frankosgit/GoogleImageSearchAndSave' target="_blank">https://github.com/frankosgit/GoogleImageSearchAndSave</a>
+                                            <a href='https://github.com/frankosgit/PhotoHive' target="_blank">https://github.com/frankosgit/PhotoHive</a>
                                         </li>
                                     </ul>
                                 </div>
